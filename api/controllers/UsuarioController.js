@@ -4,6 +4,7 @@
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
+var helper = include('../helpers')
 
 module.exports = {
   
@@ -24,7 +25,7 @@ module.exports = {
         }catch(err){
             return res.badRequest('Datos Inválidos');
         }
-		return await Usuario.create(obj).then(data => { return res.ok(data); }).fetch();
+        return helper.serialize(await Usuario.create(obj).then(data => { return res.ok(data); }).fetch() );
     },
     async login(req, res){
 
