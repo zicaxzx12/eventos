@@ -18,7 +18,8 @@ module.exports = {
       required: true
     },
     date: {
-      type: 'ref',
+      type: 'string',
+      custom: function (value) { return new Date(Date.now()).toISOString().substring(0, 10) < value},
       required: true,
       columnType: 'Datetime'
     },

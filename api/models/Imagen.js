@@ -1,5 +1,5 @@
 /**
- * Asistente.js
+ * Imagen.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -9,16 +9,13 @@ module.exports = {
 
   attributes: {
 
-    Usuario: {
-      model: 'Usuario'
+    fileName: {
+      type: 'string'
     },
-    Evento: {
-      model: 'Evento'
-    },
-    Calificacion: {
-      type: 'number',
-      required: false
-    },
+    description: {
+      type: 'string'
+    }
+
   },
 
 };

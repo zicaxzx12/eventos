@@ -11,12 +11,12 @@ module.exports = {
 
     firstName: {
       type:'string',
-      regex: /^[a-zA-Z]$/i,
+      regex: /^[a-zA-Z]+$/i,
       required: true
     },
     lastName: {
       type: 'string',
-      regex: /^[a-zA-Z]$/i,
+      regex: /^[a-zA-Z]+$/i,
       required: true
     },
     email: {

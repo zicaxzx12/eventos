@@ -35,7 +35,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  // schema: true,
+  schema: true,
 
 
   /***************************************************************************
@@ -53,7 +53,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  // migrate: 'alter',
+  migrate: 'alter',
 
 
   /***************************************************************************
@@ -71,7 +71,7 @@ module.exports.models = {
   attributes: {
     //createdAt: { type: 'number', autoCreatedAt: true, },
     //updatedAt: { type: 'number', autoUpdatedAt: true, },
-    status: { type: 'boolean' },
+    status: { type: 'boolean', defaultsTo: true },
     id: { type: 'number', autoIncrement: true, },
     //--------------------------------------------------------------------------
     //  /\   Using MongoDB?
@@ -119,7 +119,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  cascadeOnDestroy: true
+  cascadeOnDestroy: false
 
 
 };
